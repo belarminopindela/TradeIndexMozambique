@@ -19,7 +19,7 @@ INSERT file='src\T71M Chain_first_year.sps'.
 INSERT file='src\T72M Chain_next_years.sps'.
 INSERT file='src\T80M Coverage.sps'.
 
-* Check unit values for external source data before use as input data
+* Check unit values for external source data before use as input data.
 * T05M.
 external_source flow=Export year=2023 quarter=1.
 external_source flow=Export year=2023 quarter=2.
@@ -76,7 +76,7 @@ external_source flow=Export year=2024 quarter=1.
 
 *****1st quarter*************
 
-* Check unit values for external source data before use as input data
+* Check unit values for external source data before use as input data.
 * T05M.
 external_source flow=Export year=2024 quarter=1.
 
@@ -106,7 +106,7 @@ indices_unchained flow=Export year_base=2023 year=2024 quarter=1.
 *****2nd quarter*************.
 
 
-* Check unit values for external source data before use as input data
+* Check unit values for external source data before use as input data.
 * T05M.
 external_source flow=Export year=2024 quarter=2.
 
@@ -136,7 +136,7 @@ indices_unchained flow=Export year_base=2023 year=2024 quarter=2.
 *****3th quarter*************.
 
 
-* Check unit values for external source data before use as input data
+* Check unit values for external source data before use as input data.
 * T05M.
 external_source flow=Export year=2024 quarter=3.
 
@@ -165,7 +165,7 @@ indices_unchained flow=Export year_base=2023 year=2024 quarter=3.
 *****4th quarter*************.
 
 
-* Check unit values for external source data before use as input data
+* Check unit values for external source data before use as input data.
 * T05M.
 external_source flow=Export year=2024 quarter=4.
 
@@ -239,7 +239,7 @@ base_prices flow=Export year=2025 year_1 = 2024
 *****1st quarter*************
 
 
-* Check unit values for external source data before use as input data
+* Check unit values for external source data before use as input data.
 * T05M.
 external_source flow=Export year=2025 quarter=1.
 
@@ -267,7 +267,7 @@ indices_unchained flow=Export year_base=2024 year=2025 quarter=1.
 
 *****2nd quarter*************.
 
-* Check unit values for external source data before use as input data
+* Check unit values for external source data before use as input data.
 * T05M.
 external_source flow=Export year=2025 quarter=2.
 
@@ -294,7 +294,7 @@ indices_unchained flow=Export year_base=2024 year=2025 quarter=2.
 
 *****3th quarter*************.
 
-* Check unit values for external source data before use as input data
+* Check unit values for external source data before use as input data.
 * T05M.
 external_source flow=Export year=2025 quarter=3.
 
@@ -322,7 +322,7 @@ indices_unchained flow=Export year_base=2024 year=2025 quarter=3.
 
 *****4th quarter*************.
 
-* Check unit values for external source data before use as input data
+* Check unit values for external source data before use as input data.
 * T05M.
 external_source flow=Export year=2025 quarter=4.
 
