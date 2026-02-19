@@ -7,6 +7,7 @@ INSERT file='src\008 Import_special_series_list.sps'.
 INSERT file='src\009 Import_external_source_list.sps'.
 
 * Execute every time we run the index.
+INSERT file='src\T05M External_source.sps'.
 INSERT file='src\T10M Read_trade_quarter.sps'.
 INSERT file='src\A10M CreateWightBasePopulation.sps'.
 INSERT file='src\A20M CreateWeightBase.sps'.
@@ -18,7 +19,12 @@ INSERT file='src\T71M Chain_first_year.sps'.
 INSERT file='src\T72M Chain_next_years.sps'.
 INSERT file='src\T80M Coverage.sps'.
 
-
+* Check unit values for external source data before use as input data
+* T05M.
+external_source flow=Export year=2023 quarter=1.
+external_source flow=Export year=2023 quarter=2.
+external_source flow=Export year=2023 quarter=3.
+external_source flow=Export year=2023 quarter=4.
 
 * Quarterly first year.
 * Select limits for outliers - standard deviation from mean.
@@ -66,7 +72,14 @@ base_prices flow=Export year=2024 year_1 = 2023
 
 ************************ Quarterly (2024)*******************************************************
   
+external_source flow=Export year=2024 quarter=1.
+
 *****1st quarter*************
+
+* Check unit values for external source data before use as input data
+* T05M.
+external_source flow=Export year=2024 quarter=1.
+
 * Select limits for outliers - standard deviation from mean.
 * T10M.
 read_quarter flow=Export year=2024 quarter=1  
@@ -91,6 +104,13 @@ indices_unchained flow=Export year_base=2023 year=2024 quarter=1.
 
 
 *****2nd quarter*************.
+
+
+* Check unit values for external source data before use as input data
+* T05M.
+external_source flow=Export year=2024 quarter=2.
+
+
 * Select limits for outliers - standard deviation from mean.
 * T10M.
 read_quarter flow=Export year=2024 quarter=2  
@@ -114,6 +134,12 @@ impute_price flow=Export year_base=2023 quarter_1=1 year=2024 quarter=2.
 indices_unchained flow=Export year_base=2023 year=2024 quarter=2.
 
 *****3th quarter*************.
+
+
+* Check unit values for external source data before use as input data
+* T05M.
+external_source flow=Export year=2024 quarter=3.
+
 * Select limits for outliers - standard deviation from mean.
 * T10M.
 read_quarter flow=Export year=2024 quarter=3  
@@ -137,6 +163,13 @@ impute_price flow=Export year_base=2023 quarter_1=2 year=2024 quarter=3.
 indices_unchained flow=Export year_base=2023 year=2024 quarter=3.
 
 *****4th quarter*************.
+
+
+* Check unit values for external source data before use as input data
+* T05M.
+external_source flow=Export year=2024 quarter=4.
+
+
 * Select limits for outliers - standard deviation from mean.
 * T10M.
 read_quarter flow=Export year=2024 quarter=4  
@@ -204,6 +237,12 @@ base_prices flow=Export year=2025 year_1 = 2024
 ************************ Quarterly (2025)*******************************************************
   
 *****1st quarter*************
+
+
+* Check unit values for external source data before use as input data
+* T05M.
+external_source flow=Export year=2025 quarter=1.
+
 *  Select limits for outliers - standard deviation from mean.
 * T10M.
 read_quarter flow=Export year=2025 quarter=1  
@@ -227,6 +266,11 @@ impute_price flow=Export year_base=2024 quarter_1=4 year=2025 quarter=1.
 indices_unchained flow=Export year_base=2024 year=2025 quarter=1.
 
 *****2nd quarter*************.
+
+* Check unit values for external source data before use as input data
+* T05M.
+external_source flow=Export year=2025 quarter=2.
+
 * Select limits for outliers - standard deviation from mean.
 * T10M.
 read_quarter flow=Export year=2025 quarter=2  
@@ -249,6 +293,11 @@ impute_price flow=Export year_base=2024 quarter_1=1 year=2025 quarter=2.
 indices_unchained flow=Export year_base=2024 year=2025 quarter=2.
 
 *****3th quarter*************.
+
+* Check unit values for external source data before use as input data
+* T05M.
+external_source flow=Export year=2025 quarter=3.
+
 * Select limits for outliers - standard deviation from mean.
 * T10M.
 read_quarter flow=Export year=2025 quarter=3  
@@ -272,6 +321,11 @@ impute_price flow=Export year_base=2024 quarter_1=2 year=2025 quarter=3.
 indices_unchained flow=Export year_base=2024 year=2025 quarter=3.
 
 *****4th quarter*************.
+
+* Check unit values for external source data before use as input data
+* T05M.
+external_source flow=Export year=2025 quarter=4.
+
 * Select limits for outliers - standard deviation from mean.
 * T10M.
 read_quarter flow=Export year=2025 quarter=4  

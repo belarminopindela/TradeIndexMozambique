@@ -32,7 +32,7 @@ GET DATA
   /VARIABLES=
     flow A1
     year F4
-    month A2
+    month F2
     ref A14
     ItemID A8
     comno A9
@@ -96,7 +96,7 @@ GET DATA
   /VARIABLES=
     flow A1
     year F4
-    month A2
+    month F2
     ref A14
     ItemID A8
     comno A9
@@ -176,8 +176,7 @@ FREQUENCIES found_section.
 
 DELETE VARIABLES found_section.
 
-COMPUTE quarter = NUMBER(month,F2) / 3.
-COMPUTE quarter = TRUNC(quarter) + (quarter > TRUNC(quarter)).
+COMPUTE quarter = TRUNC((month - 1) / 3) + 1.
 EXECUTE.
 
 * --- Extend comno width before appending.

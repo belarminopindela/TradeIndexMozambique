@@ -9,8 +9,8 @@ GET DATA
   /READNAMES=ON.
 EXECUTE.
 ALTER TYPE comno (A9).
-SORT CASES BY comno.
 SELECT IF (comno NE '').
+SORT CASES BY comno.
 SAVE OUTFILE='data\Use_external_source_Export.sav'.
 
 
@@ -26,7 +26,7 @@ GET DATA
   /READNAMES=ON.
 EXECUTE.
 ALTER TYPE comno (A9).
-SORT CASES BY comno.
 SELECT IF (comno NE '').
+SORT CASES BY comno.
 SAVE OUTFILE='data\Use_external_source_Import.sav'.
 
